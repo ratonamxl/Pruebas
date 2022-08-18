@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repaso-JSON</title>
+</head>
+<body>
+    <p id="ventanita">
+
+    </p>
+    <script>
+        //Objeto javaScript
+        let hospital ={
+             nombre :"La raza",
+            direccion: "Lazaro cardenas 22",
+            especialidad:["Orthopedia","Pediatria","Ginecologia"]
+         }
+         let hospital2 ={
+             nombre :"Siglo XXI",
+            direccion: "Pino 21",
+           especialidad:["Pediatria","Cardiologia","Oncologia"]
+         }
+        
+    //     // document.body.append("");
+
+    //     //Manipular el DOM Document Object Model
+    //     //crear el nuevo elemento
+    //     let h1 =  document.createElement("h1");
+    //     // h1.innerText = "Relacion de";
+    //     h1.innerText = hospital.nombre;
+    //     //Asignarle el contenido al elemento
+    //     let cadenaSalida= "Nombre del hospital:" + hospital.nombre;
+    //     cadenaSalida+= " ,Especialidad: "+hospital.especialidad[0];
+    //     h1.innerText= cadenaSalida ;
+
+    //     document.body.append(h1);
+    //     console.log(hospital);
+
+    //    /**/
+    //     let ol=document.createElement("ol");    
+    //     let contenidoEspecialidades="";
+
+    //     let arreglo = hospital.especialidad;
+
+    //     //Iterando la coleccion (array)
+    //     for(let i=0 ; i<arreglo.length;i++){
+    //         contenidoEspecialidades += "<li>" + hospital.especialidad[i]+"</li>";
+    //     }
+    //     for(let i=0 ; i<arreglo.length;i++){
+    //         contenidoEspecialidades += "<li>" + hospital2.especialidad[i]+"</li>";
+    //     }
+
+    //     ol.innerHTML=contenidoEspecialidades;
+    //     document.body.append(ol);
+    //     console.log(ol);
+
+    //     let ol=document.createElement("ol");    
+    
+        let arrayNombres = ["Ana","Isabel","Pedro"];
+        let segundoArreglo = ["Carlos","Jorge","Ana"];
+        let tercer=[];
+        try
+        {
+            for(let i=0;i<segundoArreglo.length;i++){
+                let resultadoBusqueda= arrayNombres.indexOf(segundoArreglo[i]);
+
+                //clonacion
+                if(resultadoBusqueda ===-1 ){
+                    arrayNombres=[...arrayNombres,segundoArreglo[i]];
+                }
+            }
+            document.getElementById("ventanita").innerText=arrayNombres.length;
+        // let tercer=[...arrayNombres,...arrayNombres];
+        }
+        catch(error){
+            document.getElementById("ventanita").innerText=error;
+        }
+        document.getElementById("ventanita").innerText=arrayNombres.length;
+        //arrayNombres.indexOf(segundoArreglo[0]);
+        //tercer.length;
+
+        // let especialidades = "<li>" + hospital.especialidad[0]+"</li>";
+        // especialidades += "<li>" + hospital.especialidad[1]+"</li>";
+        // especialidades += "<li>" + hospital2.especialidad[0]+"</li>";
+        // especialidades += "<li>" + hospital2.especialidad[1]+"</li>";
+       
+
+        /*Ejemplo */
+        /*Especialidades*/
+        let arregloHospital =hospital.especialidad;
+        let arregloHospital2 =hospital2.especialidad;
+     
+        try
+        {
+            for(let i=0;i<arregloHospital2.length;i++){
+                let resultadoBusqueda= arregloHospital.indexOf(arregloHospital2[i]);
+
+                //clonacion
+                if(resultadoBusqueda ===-1 ){
+                    arregloHospital=[...arregloHospital,arregloHospital2[i]];
+                }
+            }
+            document.getElementById("ventanita").innerText=arregloHospital.length;
+        // let tercer=[...arrayNombres,...arrayNombres];
+        }
+        catch(error){
+            document.getElementById("ventanita").innerText=error;
+        }
+        document.getElementById("ventanita").innerText=arregloHospital.length;
+        document.getElementById("ventanita").innerHTML = arregloHospital;
+        console.log(arregloHospital);
+
+    </script>
+</body>
+</html>
