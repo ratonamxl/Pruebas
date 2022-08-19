@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metodosArreglos</title>
+</head>
+<body>
+    <script>
+        // creamos un arreglo vacio
+         let arreglo = [];
+
+         //agrego un nuevo elemento
+         arreglo.push("Mexicali");
+         arreglo.push("Ensenada");
+         arreglo.push("Tijuana");
+
+         //Elimina el ultimo elemento
+         arreglo.pop();
+
+
+
+
+         let parrafo = document.createElement('p');
+         parrafo.innerText = "Elementos en el arreglo " + arreglo.length ;
+         document.body.append(parrafo);
+    </script>
+</body>
+</html>
